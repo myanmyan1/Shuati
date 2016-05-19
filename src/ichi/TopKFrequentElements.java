@@ -84,8 +84,11 @@ public class TopKFrequentElements {
 			pairQueue.add(pair);
 		}
 		
-		result.add(pairQueue.poll().key);
-		result.add(pairQueue.poll().key);
+		int kk = Math.min(k, pairQueue.size());
+		
+		for (int j=0; j<kk; j++) {
+			result.add(pairQueue.poll().key);
+		}
 		
 		return result;
 	}
