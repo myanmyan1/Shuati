@@ -24,13 +24,13 @@ public class IntersectionofTwoArrays {
         Set<Integer> set = new HashSet<Integer>();
         
         for (int i:nums1) {
-        	if (set.contains(nums1[i])) {
+        	if (set.contains(i)) {
         		continue;
         	}
         	
         	for (int j:nums2) {
-        		if (nums1[i] == nums2[j]) {
-        			set.add(nums1[i]);
+        		if (i == j) {
+        			set.add(i);
         		}
         	}
         }
